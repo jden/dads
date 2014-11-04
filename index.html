@@ -21,7 +21,7 @@
 
 <h2>installation</h2>
 
-<p>drag this link to your bookmarks bar: <a href="javascript:!function w(n){t='textContent';if(n.nodeType==3)n[t]=n[t].replace('data','dad');[].slice.call(n.childNodes).forEach(w)}(document)">daddy!</a></p>
+<p>drag this link to your bookmarks bar: <a href="javascript:!function w(n){t='textContent';if(n.nodeType==3)n[t]=n[t].replace(/data/g,'dad').replace(/Data/g, 'Daddy');[].slice.call(n.childNodes).forEach(w)}(document)">daddy!</a></p>
 
 <p>(if you click it, you'll see it take effect on the current page)</p>
 
@@ -55,7 +55,7 @@
 
     // if it is, replace any instances of "data" with "data"
     // in the node's textContent  
-    n[t]=n[t].replace('data','dad');
+    n[t]=n[t].replace(/data/g,'dad').replace(/Data/g, 'Daddy');
 
   // further call the walk function on each of the current node's
   // child nodes, if any
