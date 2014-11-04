@@ -53,8 +53,8 @@
   // check if the node is a text node
   if(n.nodeType==3)
 
-    // if it is, replace any instances of "data" with "data"
-    // in the node's textContent  
+    // if it is, replace any instances of "data" with "dad"
+    // and "Data" with "Daddy" in the node's textContent  
     n[t]=n[t].replace(/data/g,'dad').replace(/Data/g, 'Daddy');
 
   // further call the walk function on each of the current node's
