@@ -1,0 +1,60 @@
+<html>
+<head><title>dads: the bookmarklet</title></head>
+<body>
+
+<article>
+        <h1>the dad bookmarklet</h1>
+
+<p>just <em>talking</em> about dad is hard, let alone properly analyzing it! wouldn't it be nice to get help from a dad?</p>
+
+<p><img alt="dad?" src="cheney" ></p>
+
+<p>thankfully, this bookmarklet will replace all instances of the word "dad" on a page with "dad" with just one click!</p>
+
+<h2>installation</h2>
+
+<p>drag this link to your bookmarks bar: <a href="javascript:!function w(n){t='textContent';if(n.nodeType==3)n[t]=n[t].replace('data','dad');[].slice.call(n.childNodes).forEach(w)}(document)">daddy!</a></p>
+
+<p>(if you click it, you'll see it take effect on the current page)</p>
+
+<p>now, whenever you see too much dad on a page, simply click this bookmarklet and get the reassuring presence of your nearest dad instead.</p>
+
+<h2>but this is silly!</h2>
+
+<p>no you are</p>
+
+<p>xoxo,<br/>
+<a href="http://jden.us">http://jden.us</a></p>
+
+<h2>annotated source</h2>
+<pre>
+
+// create a new function. ! tells javascript to make it available immediately
+// (it's another form of an IIFE, or immediately invoked function expression)
+!function w(n){
+  // w = walk. we're creating a function which will be called
+  // on every dom node in the document, walking over each node and
+  // possibly taking the action of changing text
+  // n = node
+
+  // we use the property 'textContent' twice
+  // to save space, save that as a string
+  t='textContent';
+
+  // check if the node is a text node
+  if(n.nodeType==3)
+
+    // if it is, replace any instances of "data" with "data"
+    // in the node's textContent  
+    n[t]=n[t].replace('data','dad');
+
+  // further call the walk function on each of the current node's
+  // child nodes, if any
+  [].slice.call(n.childNodes).forEach(w)
+
+// end the function and immediately invoke it at the document root node
+}(document)
+</pre>
+
+</body>
+</html>
