@@ -21,7 +21,7 @@
 
 <h2>installation</h2>
 
-<p>drag this link to your bookmarks bar: <a href="javascript:!function w(n){t='textContent';if(n.nodeType==3)n[t]=n[t].replace(/data/g,'dad').replace(/Data/g, 'Daddy');[].slice.call(n.childNodes).forEach(w)}(document)">daddy!</a></p>
+<p>drag this link to your bookmarks bar: <a href="javascript:(function w(n){t='textContent';if(n.nodeType==3)n[t]=n[t].replace(/data/g,'dad').replace(/Data/g, 'Daddy');[].slice.call(n.childNodes).forEach(w)})(document)">daddy!</a></p>
 
 <p>(if you click it, you'll see it take effect on the current page)</p>
 
@@ -32,15 +32,13 @@
 <p>nah u</p>
 
 <p>xoxo,<br/>
-<a href="http://jden.us">http://jden.us</a></p>
-<!-- I made this while listening to the new tswift joint, "blank spaces" is a hott jam! -->
+<a href="http://suarez.systems">http://suarez.systems</a></p>
 
 <h2>annotated source</h2>
 <pre>
 
-// create a new function. ! tells javascript to make it available immediately
-// (it's another form of an IIFE, or immediately invoked function expression)
-!function w(n){
+// create a new function in an IIFE
+(function w(n){
   // w = walk. we're creating a function which will be called
   // on every dom node in the document, walking over each node and
   // possibly taking the action of changing text
@@ -62,10 +60,10 @@
   [].slice.call(n.childNodes).forEach(w)
 
 // end the function and immediately invoke it at the document root node
-}(document)
+})(document)
 </pre>
 
-<br/><a href="https://github.com/jden/dads/"><strong>fork it on grithubs</strong>!</a>
+<br/><a href="https://github.com/junosuarez/dads/"><strong>fork it on grithubs</strong>!</a>
 
 </body>
 </html>
